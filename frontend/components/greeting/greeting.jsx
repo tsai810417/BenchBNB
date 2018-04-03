@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const personalGreeting = (currentUser, logout) => (
   <nav>
     <h2>Hello, {currentUser.username}</h2>
-    <button onClick=(logout)>Log Out</button>
+    <button onClick={logout}>Log Out</button>
   </nav>
 );
 
@@ -15,12 +15,12 @@ const sessionLinks = () => (
   </nav>
 );
 
-const Greeting = ({ currentUser, logout}) => (
+const Greeting = ({ currentUser, logout}) => {
   if (currentUser) {
-    personalGreeting(currentUser, logout);
+    return personalGreeting(currentUser, logout);
   } else {
-    sessionLinks();
+    return sessionLinks();
   }
-)
+}
 
 export default Greeting;

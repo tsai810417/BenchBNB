@@ -11,5 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   // TEST END
   const root = document.getElementById('root');
-  ReactDOM.render(<h1>Welcome to BenchBnB</h1>, root);
+  ReactDOM.render(<Root store={ store } />, root);
 });
